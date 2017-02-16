@@ -135,15 +135,12 @@
 
       'dependencies': [
         'node_js2c#host',
-        'deps/libsquash/enclose_io_libsquash.gyp:enclose_io_libsquash',
       ],
 
       'include_dirs': [
         'src',
         'tools/msvs/genfiles',
         'deps/uv/src/ares',
-        'deps/libsquash/include',
-        'deps/libsquash/sample',
         '<(SHARED_INTERMEDIATE_DIR)', # for node_natives.h
       ],
 
@@ -877,11 +874,10 @@
     {
       'target_name': 'cctest',
       'type': 'executable',
-      'dependencies': [ 'deps/gtest/gtest.gyp:gtest', 'deps/libsquash/enclose_io_libsquash.gyp:enclose_io_libsquash' ],
+      'dependencies': [ 'deps/gtest/gtest.gyp:gtest' ],
       'include_dirs': [
         'src',
         'deps/v8/include',
-        'deps/libsquash/include',
         '<(SHARED_INTERMEDIATE_DIR)'
       ],
       'defines': [
